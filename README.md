@@ -10,4 +10,4 @@ I used docker to run SQL server and RabbitMQ, you can use the link below to use 
 Inside the solution you will find 2 entrypoints, one is for web and the chat management and the second one is for manage the command.
 you need to run both projects to the application run in his full options.
 
-- Unfortunately I have some personal problem and I didn't finish everything that I want, Like Unit tests for everything, But i want to finish this project.
+- Unfortunately I have some personal problems and I didn't finish everything that I want, Like Unit tests for everything, But i want to finish this project.
