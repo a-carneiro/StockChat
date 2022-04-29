@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = EndpointManager.Repository.Tests
+build_property.ProjectDir = C:\Repos\StockChat\EndpointManager\EndpointManager\test\EndpointManager.Repository.Tests\

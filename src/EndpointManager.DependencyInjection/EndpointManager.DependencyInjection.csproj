@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EndpointManager.Application\EndpointManager.Application.csproj" />
+    <ProjectReference Include="..\EndpointManager.Reference\EndpointManager.Reference.csproj" />
+    <ProjectReference Include="..\EndpointManager.Repository\EndpointManager.Repository.csproj" />
+  </ItemGroup>
+
+  
+
+</Project>

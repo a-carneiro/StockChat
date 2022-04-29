@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "EndpointManager.Interfece/1.0.0": {
+        "dependencies": {
+          "EndpointManager.Domain": "1.0.0"
+        },
+        "runtime": {
+          "EndpointManager.Interfece.dll": {}
+        }
+      },
+      "EndpointManager.Domain/1.0.0": {
+        "runtime": {
+          "EndpointManager.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EndpointManager.Interfece/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EndpointManager.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
