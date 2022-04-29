@@ -1,8 +1,0 @@
-C:\Users\Joao.carneiro\source\repos\EndpointManager\src\EndpointManager.Reference\bin\Debug\netcoreapp3.1\EndpointManager.Reference.deps.json
-C:\Users\Joao.carneiro\source\repos\EndpointManager\src\EndpointManager.Reference\bin\Debug\netcoreapp3.1\EndpointManager.Reference.dll
-C:\Users\Joao.carneiro\source\repos\EndpointManager\src\EndpointManager.Reference\bin\Debug\netcoreapp3.1\EndpointManager.Reference.pdb
-C:\Users\Joao.carneiro\source\repos\EndpointManager\src\EndpointManager.Reference\obj\Debug\netcoreapp3.1\EndpointManager.Reference.csproj.CoreCompileInputs.cache
-C:\Users\Joao.carneiro\source\repos\EndpointManager\src\EndpointManager.Reference\obj\Debug\netcoreapp3.1\EndpointManager.Reference.AssemblyInfoInputs.cache
-C:\Users\Joao.carneiro\source\repos\EndpointManager\src\EndpointManager.Reference\obj\Debug\netcoreapp3.1\EndpointManager.Reference.AssemblyInfo.cs
-C:\Users\Joao.carneiro\source\repos\EndpointManager\src\EndpointManager.Reference\obj\Debug\netcoreapp3.1\EndpointManager.Reference.dll
-C:\Users\Joao.carneiro\source\repos\EndpointManager\src\EndpointManager.Reference\obj\Debug\netcoreapp3.1\EndpointManager.Reference.pdb

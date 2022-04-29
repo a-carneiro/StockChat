@@ -1,0 +1,114 @@
+﻿@model Domain.Entity.Chat
+
+
+<ul class="w3-ul w3-card-4 body">
+    @if (Model?.Messages.Count() == 0)
+    {
+        <li class="w3-display-container w3-border w3-round-xlarge">No messages.... </li>
+    }
+
+    @foreach (var message in Model?.Messages)
+    {
+        <li class="w3-display-container w3-border w3-round-xlarge"> 
+            <p>@message.Name Say: </p>
+            <p>@message.Content</p> 
+            <span class="w3-transparent w3-display-right">@message.SendAt</span>
+        </li>
+    }
+</ul>
+<div class="w3-container">
+    <div class="w3-col m12 w3-teal">
+        <div class="w3-card w3-round">
+            <div class="w3-container">
+                <form onsubmit="sendMessage(event)" asp-action="SendMessage" asp-controller="Home" class="w3-container">
+                    <div class="w3-section">
+                        <input class="w3-hide" name="chatId" value="@Model.Id" required>
+                        <input id="textInput" class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Message" name="message" required>
+                        <button class="w3-button w3-block w3-green w3-section w3-padding" type="submit">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script src="~/js/signalr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script>
+        var connection = new signalR.HubConnectionBuilder().withUrl("/chatHub").build();
+
+        connection.on("RecievedMessage", function (data) {
+            console.log(data);
+            var message = document.createElement("li");
+            message.classList.add('w3-display-container');
+            message.classList.add('w3-border');
+            message.classList.add('w3-round-xlarge');
+
+            var pOne = document.createElement("p");
+            pOne.appendChild(document.createTextNode(data.name + ' Say:'))
+
+            var pTwo = document.createElement("p");
+            pTwo.appendChild(document.createTextNode(data.content))
+
+            var span = document.createElement("span");
+            span.classList.add('w3-transparent');
+            span.classList.add('w3-display-right');
+            var date = new Date(data.sendAt).toLocaleString('en-US', { day: 'numeric', month: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true });
+            span.appendChild(document.createTextNode(date));
+
+            message.appendChild(pOne);
+            message.appendChild(pTwo);
+            message.appendChild(span);
+
+
+            var chat = document.querySelector('.body');
+            chat.append(message);
+        })
+
+        var joinRoom = function (connectionId) {
+            axios.post('/Chat/JoinGroup/' + connectionId + '/@Model.Id', null)
+                .then(res => {
+                    console.log("room Joined")
+                })
+                .catch(err => {
+                    console.log("failed to join")
+
+                })
+        }
+
+        connection.start()
+            .then(function () {
+                connection.invoke('getConnectionId').then(
+                    function (connectionId) {
+                        joinRoom(connectionId);
+                    })
+                    .catch(function (err) {
+                        console.log(err);
+                    })
+
+            })
+            .catch(function (err) {
+                console.log(err);
+            })
+
+        var form = null;
+
+        var sendMessage = function (event) {
+            event.preventDefault();
+            var data = new FormData(event.target);
+
+            document.getElementById('textInput').value = '';
+            axios.post('/Chat/SendMessage', data)
+                .then(res => {
+                    console.log("message sent")
+                })
+                .catch(err => {
+                    console.log("message not sent!")
+
+                })
+        }
+    </script>
+}
+

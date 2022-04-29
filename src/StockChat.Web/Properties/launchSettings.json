@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "StockChat.Web": {
+      "commandName": "Project",
+      "applicationUrl": "http://localhost:4000"
+    }
+  }
+}

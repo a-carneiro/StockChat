@@ -1,0 +1,8 @@
+﻿@model IEnumerable<Domain.Entity.Chat>
+
+@foreach (var chat in Model)
+{
+    <a asp-controller="Home" asp-action="GetMessagesByChatId" asp-route-id="@chat.Id" class="w3-card-4 w3-bar-item w3-button w3-padding-large w3-dark-grey w3-hover-black">
+        <p> @chat.Name</p>
+    </a>
+}

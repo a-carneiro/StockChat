@@ -1,0 +1,29 @@
+﻿body, h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", sans-serif
+}
+.w3-row-padding img {
+    margin-bottom: 12px
+}
+.w3-sidebar {
+    width: 120px;
+    background: #222;
+}
+#main {
+    margin-left: 120px
+}
+
+.chat {
+    flex-grow: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.chat-body {
+    background-color: red !important;
+    flex-grow: 1 !important;
+}
+
+.chat-input {
+    background-color: green !important;
+    height: 60px !important;
+}
