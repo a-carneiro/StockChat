@@ -1,6 +1,6 @@
 # StockChat
 
-Service created to validate as tech-Challenge.
+Service created as tech-Challenge.
 
 I used docker to run SQL server and RabbitMQ, you can use the link below to use the same image that I used.
 
