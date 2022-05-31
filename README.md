@@ -1,7 +1,5 @@
 # StockChat
 
-Service created as tech-Challenge.
-
 I used docker to run SQL server and RabbitMQ, you can use the link below to use the same image that I used.
 
 - docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=yourStrong(!)Password" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
@@ -12,4 +10,4 @@ you need to run both projects to the application run in his full options.
 
 - To Create de database I recommend to use the restore file provided in the folder 'DataBase Restore' the database name is 'StockChat'.
 
-- Unfortunately I have some personal problems and I didn't finish everything that I want, Like Unit tests for everything, But i want to finish this project.
+- I Need to finish some unit tests. I will keep it updated
